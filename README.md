@@ -34,6 +34,26 @@ When translating, consider these Python-to-Java mappings:
 python .\python_source\expense_tracker.py
 ```
 
+## How To Run
+
+From the project root folder, run the Python starter program with:
+
+```powershell
+python .\python_source\expense_tracker.py
+```
+
+The program will open a text menu in the terminal. Enter a number from `1` to
+`7` to add expenses, view expenses, search by category, show the total, save,
+load, or exit.
+
+After you create the Java version in `java_translation/src`, you can compile
+and run it with commands like these:
+
+```powershell
+javac .\java_translation\src\*.java
+java -cp .\java_translation\src Main
+```
+
 ## Suggested Java Files
 
 You can create these files in `java_translation/src`:
@@ -41,4 +61,3 @@ You can create these files in `java_translation/src`:
 - `Expense.java`
 - `ExpenseTracker.java`
 - `Main.java`
-
