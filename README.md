@@ -46,8 +46,7 @@ The program will open a text menu in the terminal. Enter a number from `1` to
 `7` to add expenses, view expenses, search by category, show the total, save,
 load, or exit.
 
-After you create the Java version in `java_translation/src`, you can compile
-and run it with commands like these:
+The Java version is in `java_translation/src`. Compile and run it with:
 
 ```powershell
 javac .\java_translation\src\*.java
