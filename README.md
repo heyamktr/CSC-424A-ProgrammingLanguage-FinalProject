@@ -1,67 +1,75 @@
 # CSC 424A Final Project: Expense Tracker Translation
 
 This project starts with a console-based Expense Tracker written in Python.
-The goal is to translate the same program into Java while learning how Python
-features map to Java classes, collections, file handling, and input handling.
+The same program is translated into Java to compare Python's function-based,
+dictionary-based style with Java's class-based, statically typed style.
 
-* Project Structure
+## Project Structure
 
 - `python_source/expense_tracker.py` - original Python program
-- `java_translation/` - place your Java translation here
+- `java_translation/src/Main.java` - Java program entry point
+- `java_translation/src/Expense.java` - Java expense data class
+- `java_translation/src/ExpenseTracker.java` - Java menu and tracker logic
 - `data/expenses.csv` - saved expense records created by the program
 
-* Python Features Used
+## Program Features
 
-- Console menu input
-- Lists of expense records
-- Dictionaries for simple record storage
-- File save/load using CSV
-- Loops, conditionals, and functions
-- Input validation for amounts and dates
-- Expense editing and deletion
-- Category searching and date-range filtering
-- Sorting by date, amount, category, or description
-- Summary totals by category
+- Add, edit, and delete expenses
+- View all expenses
+- Search expenses by category
+- Filter expenses by date range
+- Sort expenses by date, amount, category, or description
+- Show total spending
+- Show totals by category
+- Save and load expenses with a CSV file
+- Validate amounts and dates entered by the user
 
-* Java Translation Ideas
+## Running the Python Version
 
-When translating, consider these Python-to-Java mappings:
+From the project root folder, run:
 
-- Python dictionary expense -> Java `Expense` class
-- Python list -> Java `ArrayList<Expense>`
-- Python functions -> Java static methods or instance methods
-- Python `input()` -> Java `Scanner`
-- Python CSV file handling -> Java `BufferedReader` and `BufferedWriter`
-
-* Running the Python Version
-
-``` Type into powershell
+```powershell
 python .\python_source\expense_tracker.py
 ```
 
-* How To Run
+## Running the Java Version
 
-From the project root folder, run the Python starter program with:
+Compile the Java files:
 
-```Type into powershell
-python .\python_source\expense_tracker.py
-```
-
-The program will open a text menu in the terminal. Enter a number from `1` to
-`12` to add, edit, delete, view, search, filter, sort, total, save, load, or
-exit.
-
-The Java version is in `java_translation/src`. Compile and run it with:
-
-```Type into powershell
+```powershell
 javac .\java_translation\src\*.java
+```
+
+Run the Java program:
+
+```powershell
 java -cp .\java_translation\src Main
 ```
 
-* Java Files
+## Menu
 
-The Java version uses these files in `java_translation/src`:
+Both versions use the same menu:
 
-- `Expense.java`
-- `ExpenseTracker.java`
-- `Main.java`
+```text
+1. Add expense
+2. Edit expense
+3. Delete expense
+4. View all expenses
+5. Search by category
+6. Filter by date range
+7. Sort expenses
+8. Show total spent
+9. Show totals by category
+10. Save expenses
+11. Load expenses
+12. Exit
+```
+
+## Translation Notes
+
+- Python dictionaries are translated into a Java `Expense` class.
+- Python lists are translated into `ArrayList<Expense>`.
+- Python functions are translated into methods in `ExpenseTracker`.
+- Python `input()` is translated into Java `Scanner`.
+- Python CSV file handling is translated into Java `BufferedReader` and `BufferedWriter`.
+- Python date validation with `datetime` is translated into Java `LocalDate`.

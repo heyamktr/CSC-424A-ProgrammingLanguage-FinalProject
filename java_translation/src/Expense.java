@@ -12,6 +12,7 @@ public class Expense {
     }
 
     public double getAmount() {
+
         return amount;
     }
 
@@ -20,16 +21,13 @@ public class Expense {
     }
 
     public String getCategory() {
-        return category;
-    }
+        return category;}
 
     public void setCategory(String category) {
-        this.category = category;
-    }
+        this.category = category;}
 
     public String getDescription() {
-        return description;
-    }
+        return description;}
 
     public void setDescription(String description) {
         this.description = description;
@@ -37,18 +35,22 @@ public class Expense {
 
     public String getDate() {
         return date;
+
     }
 
     public void setDate(String date) {
+
         this.date = date;
     }
 
     public String toCsvLine() {
+        
         return amount + "," + escapeCsv(category) + "," + escapeCsv(description) + "," + escapeCsv(date);
     }
 
     private String escapeCsv(String value) {
         if (value.contains(",") || value.contains("\"")) {
+
             return "\"" + value.replace("\"", "\"\"") + "\"";
         }
 
