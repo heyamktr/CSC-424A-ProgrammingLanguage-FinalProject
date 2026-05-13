@@ -4,15 +4,15 @@ This project starts with a console-based Expense Tracker written in Python.
 The same program is translated into Java to compare Python's function-based,
 dictionary-based style with Java's class-based, statically typed style.
 
-## Project Structure
+* Project Structure
 
 - `python_source/expense_tracker.py` - original Python program
-- `java_translation/src/Main.java` - Java program entry point
+- `java_translation/src/Main.java` - Java program start file
 - `java_translation/src/Expense.java` - Java expense data class
 - `java_translation/src/ExpenseTracker.java` - Java menu and tracker logic
-- `data/expenses.csv` - saved expense records created by the program
+- `data/expenses.csv` - saved expense records created by the program ( used as the database)
 
-## Program Features
+* Program Features
 
 - Add, edit, and delete expenses
 - View all expenses
@@ -24,15 +24,14 @@ dictionary-based style with Java's class-based, statically typed style.
 - Save and load expenses with a CSV file
 - Validate amounts and dates entered by the user
 
-## Running the Python Version
+* Running the Python Version
 
 From the project root folder, run:
 
 ```powershell
 python .\python_source\expense_tracker.py
 ```
-
-## Running the Java Version
+* Running the Java Version
 
 Compile the Java files:
 
@@ -45,8 +44,7 @@ Run the Java program:
 ```powershell
 java -cp .\java_translation\src Main
 ```
-
-## Menu
+* Menu
 
 Both versions use the same menu:
 
@@ -65,7 +63,7 @@ Both versions use the same menu:
 12. Exit
 ```
 
-## Translation Notes
+* Translation Notes
 
 - Python dictionaries are translated into a Java `Expense` class.
 - Python lists are translated into `ArrayList<Expense>`.
